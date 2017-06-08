@@ -42,8 +42,8 @@ public class AppAlumnado {
         System.out.println("Adios, Mr Meeseeks...");
         for(Integer id : ids){
             explodeMrMeeseeks(setMrMe, id);
-        }
 
+        }
     }
 
     private static void listMrMeeseeks(ArrayList<MrMeeseeks> setMrMe) {
@@ -62,14 +62,11 @@ public class AppAlumnado {
         for (MrMeeseeks MrMe : setMrMe) {
             if(MrMe.getId()== id) {
                 MrMe.sayMessageOnExplode();
+                setMrMe.remove(MrMe);
+                break;
             }
+
         }
-        setMrMe.remove(id);
     }
-
-
-		/* explodeMrMeeseeks(setMrMe, id)
-		 * elimna del conjunto de Mr Meeseeks creados el que ya ha completado su cometido
-		 */
 
 }

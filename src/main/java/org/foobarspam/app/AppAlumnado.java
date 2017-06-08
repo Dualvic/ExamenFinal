@@ -1,7 +1,10 @@
 package org.foobarspam.app;
 
 
+import org.foobarspam.mrmeeseeks.MrMeeseeks;
 import org.foobarspam.proxy.ProxyMrMeeseeks;
+
+import java.util.ArrayList;
 
 public class AppAlumnado {
 
@@ -9,6 +12,9 @@ public class AppAlumnado {
 
         // Crea una estructura de datos llamada setMrMe donde almacenar los Mr Meeseeks creados
         // Crea una estructura de datos llamada ids donde almacenar los ids de los Mr Meeseeks creados
+
+        ArrayList<MrMeeseeks> setMrMe = new ArrayList<MrMeeseeks>();
+        ArrayList<Integer> ids = new ArrayList<Integer>();
 
         ProxyMrMeeseeks box = new ProxyMrMeeseeks();
 

@@ -1,3 +1,8 @@
+package org.foobarspam.app;
+
+
+import org.foobarspam.proxy.ProxyMrMeeseeks;
+
 public class AppAlumnado {
 
     public static void main( String[] args ){

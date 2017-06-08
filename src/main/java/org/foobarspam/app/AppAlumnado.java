@@ -61,10 +61,10 @@ public class AppAlumnado {
     private static void explodeMrMeeseeks(ArrayList<MrMeeseeks> setMrMe, Integer id) {
         for (MrMeeseeks MrMe : setMrMe) {
             if(MrMe.getId()== id) {
-                System.out.println("Poooooof " + id);
+                MrMe.sayMessageOnExplode();
             }
-
         }
+        setMrMe.remove(id);
     }
 
 

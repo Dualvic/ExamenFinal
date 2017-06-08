@@ -41,4 +41,9 @@ public class MainTest {
         String message = mrMeeseeks.generateMessageOnRequest().toString();
         assertThat(message, anyOf(is("Oooh yeah! Can do!"), is("Yes sireee!"), is( "Oh, yeah! Yes, ma'am!")));
     }
+
+    @Test
+    public void MrMeeseeksListTest() {
+
+    }
 }

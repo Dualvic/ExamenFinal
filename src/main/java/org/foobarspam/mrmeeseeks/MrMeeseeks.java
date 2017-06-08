@@ -14,7 +14,8 @@ public class MrMeeseeks implements Doable {
     private static AtomicInteger ID_GENERATOR = new AtomicInteger(1000);
     private Integer id;
     private String[] messageOnRequest = {"Oooh yeah! Can do!", "Yes sireee!", "Oh, yeah! Yes, ma'am!"};
-    private String messageOnExplode = "All done!";
+    private String messageOnDone = "All done!";
+    private String messageOnExplode = "Pooooooof ";
 
     public MrMeeseeks(){
         this.id = ID_GENERATOR.incrementAndGet();
@@ -26,7 +27,6 @@ public class MrMeeseeks implements Doable {
         return this.id;
     }
 
-
     // Metodos
 
     public void sayMessageOnCreate() {
@@ -35,6 +35,10 @@ public class MrMeeseeks implements Doable {
 
     public void sayMessageOnRequest() {
         System.out.println(generateMessageOnRequest());
+    }
+
+    public void sayMessageOnExplode() {
+        System.out.println(messageOnExplode + getId());
     }
 
     public String generateMessageOnRequest() {
@@ -50,7 +54,7 @@ public class MrMeeseeks implements Doable {
     }
 
     public void stopExisting() {
-        System.out.println(messageOnExplode);
+        System.out.println(messageOnDone);
     }
 
     // implementacion

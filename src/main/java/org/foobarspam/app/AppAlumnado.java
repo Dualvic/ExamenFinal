@@ -60,7 +60,9 @@ public class AppAlumnado {
 
     private static void explodeMrMeeseeks(ArrayList<MrMeeseeks> setMrMe, Integer id) {
         for (MrMeeseeks MrMe : setMrMe) {
-            System.out.println("Poooooof " + id);
+            if(MrMe.getId()== id) {
+                System.out.println("Poooooof " + id);
+            }
 
         }
     }

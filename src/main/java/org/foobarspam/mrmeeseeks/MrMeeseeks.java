@@ -9,11 +9,11 @@ import org.foobarspam.interfaces.Doable;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.concurrent.atomic.AtomicInteger;
 
-public abstract class MrMeeseeks implements Doable {
+public class MrMeeseeks implements Doable {
 
     private static AtomicInteger ID_GENERATOR = new AtomicInteger(1000);
     private Integer id;
-    private String[] messageOnRequest = {"Look at meeee!"};
+    private String[] messageOnRequest = {"Oooh yeah! Can do!", "Yes sireee!", "Oh, yeah! Yes, ma'am!"};
 
     public MrMeeseeks(){
         this.id = ID_GENERATOR.incrementAndGet();
@@ -28,15 +28,8 @@ public abstract class MrMeeseeks implements Doable {
 
     // Metodos
 
-	/* generateMessageOnRequest()
-	 * elige al azar uno de los tres mensajes
-         * que lanza Mr Meeseeks cuando se le formula
-	 * la peticion:
-	 * "Oooh yeah! Can do!"; "Yes sireee!"; "Oh, yeah! Yes, ma'am!"
-         */
-
     public void sayMessageOnCreate() {
-        System.out.println("I'm Mr Meeseeks" + getId() + generateMessageOnRequest() );
+        System.out.println("I'm Mr Meeseeks " + getId()+ " Look at meee!" );
     }
 
     public String generateMessageOnRequest() {
@@ -44,4 +37,17 @@ public abstract class MrMeeseeks implements Doable {
         return messageOnRequest[randomNumber];
     }
 
+    public void formulateRequest(String accion, String argumentos) {
+        doRequest(accion,argumentos);
+    }
+
+    public void stopExisting() {
+        System.out.println("All Done");
+    }
+
+    // implementacion
+
+    public void doRequest(String accion, String argumentos) {
+        System.out.println(accion + " " + argumentos);
+    }
 }

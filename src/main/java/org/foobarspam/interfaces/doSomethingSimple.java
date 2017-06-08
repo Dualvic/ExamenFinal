@@ -5,5 +5,5 @@ package org.foobarspam.interfaces;
  */
 public interface DoSomethingSimple<T,R> {
 
-    void doRequest();
+    void doRequest(String accion, String argumentos);
 }

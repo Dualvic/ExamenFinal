@@ -9,9 +9,19 @@ import java.util.ArrayList;
  */
 public class ProxyMrMeeseeks extends MrMeeseeks{
 
+    private MrMeeseeks mrMe;
+
     public void pushButton(ArrayList<MrMeeseeks> setMrMe) {
-        MrMeeseeks mrMee = new MrMeeseeks();
-        mrMee.
+        createMrMeeseeks();
+        mrMe.sayMessageOnCreate();
+        setMrMe.add(mrMe);
     }
 
+    public void createMrMeeseeks() {
+        mrMe = new MrMeeseeks();
+    }
+
+    public MrMeeseeks getMrMe() {
+        return mrMe;
+    }
 }

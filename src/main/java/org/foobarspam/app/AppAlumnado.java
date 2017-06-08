@@ -46,13 +46,25 @@ public class AppAlumnado {
 
     }
 
-		/* collectIds(setMrMe, ids)
-		 * Almacena en un array los ids de los Mr Meeseeks creados
-		 */
+    private static void listMrMeeseeks(ArrayList<MrMeeseeks> setMrMe) {
+        for (MrMeeseeks MrMe : setMrMe) {
+            System.out.println(MrMe.getId());
+        }
+    }
 
-		/* listMrMeeseeks(setMrMe)
-		 * Lista los ids de todos los Mr Meeseeks creados
-		 */
+    private static void collectIds(ArrayList<MrMeeseeks> setMrMe, ArrayList<Integer> ids) {
+        for (MrMeeseeks MrMe : setMrMe) {
+            ids.add(MrMe.getId());
+        }
+    }
+
+    private static void explodeMrMeeseeks(ArrayList<MrMeeseeks> setMrMe, Integer id) {
+        for (MrMeeseeks MrMe : setMrMe) {
+            System.out.println("Poooooof " + id);
+
+        }
+    }
+
 
 		/* explodeMrMeeseeks(setMrMe, id)
 		 * elimna del conjunto de Mr Meeseeks creados el que ya ha completado su cometido
